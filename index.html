@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Op Cargo Courier | Envíos a Colombia y Casillero Virtual</title>
+    <style>
+        /* Estilos Globales y Colores de la Marca */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.25;
+            color: #333333;
+            background-color: #ffffff;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Navbar */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #f0f0f0;
+            padding: 4px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 80px; /* Forzamos a que la barra blanca no mida más de esto */
+        }
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #d32f2f; /* Rojo de la marca */
+        }
+        .nav-links a {
+            color: #333333;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        .nav-links a:hover {
+            color: #d32f2f;
+        }
+        .btn-header {
+            background-color: #d32f2f;
+            color: #ffffff !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-main {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-main:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Sección Servicios */
+        .services {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 280px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #d32f2f;
+        }
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* Tabla de Tarifas Simulada */
+        .rates {
+            padding: 60px 0;
+        }
+        .rates h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Footer / Contacto */
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 15px;
+        }
+        .footer-phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .footer-phone:hover {
+            color: #d32f2f;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .services-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+   <header>
+        <div class="container navbar">
+            <a href="#" class="logo-img">
+    <img src="Logo.png.png" alt="Op Cargo Logo" style="height: 200px; width: auto; display: inline-block; vertical-align: middle;">
+</a>
+            <nav class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#tarifas">Casillero</a>
+                <a href="https://wa.me/17542130282" class="btn-header" target="_blank">Escríbenos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Bienvenida (Hero) -->
+    <section class="hero">
+        <div class="container">
+            <h1>Envíos a Colombia Fáciles, Seguros y Confiables</h1>
+            <p>¿Tienes familia en Colombia y quieres enviarles un regalo o una caja? En Op Cargo nos encargamos de que tus paquetes lleguen sin complicaciones.</p>
+            <a href="https://wa.me/17542130282" class="btn-main" target="_blank">Cotizar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Nuestros Servicios Logísticos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Envíos Puerta a Puerta</h3>
+                    <p>Llevamos tus cajas, regalos y mercancía desde Estados Unidos hasta cualquier rincón de Colombia con la mayor seguridad.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Casillero Virtual</h3>
+                    <p>Compra en Amazon, eBay y tus tiendas favoritas de EE.UU. desde Colombia. Nosotros te asignamos una dirección en Miami y te lo reenviamos.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Asesoría y Carga</h3>
+                    <p>Te ayudamos con toda la documentación y empaque necesario para que tus envíos cumplan con todas las normativas de aduana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Tarifas / Información -->
+    <section id="tarifas" class="rates">
+        <div class="container">
+            <h2>¿Por qué elegir Op Cargo?</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">Nos esforzamos por ofrecerte transparencia en cada libra y volumen enviado. Aquí tienes una referencia general de nuestros servicios:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Destino</th>
+                        <th>Beneficio Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Envío de Cajas (Courier)</td>
+                        <td>Toda Colombia</td>
+                        <td>Entrega directo en casa de tu familia.</td>
+                    </tr>
+                    <tr>
+                        <td>Casillero Inteligente</td>
+                        <td>Compras Online</td>
+                        <td>Almacenamiento gratis en Miami por 30 días.</td>
+                    </tr>
+                    <tr>
+                        <td>Carga Comercial</td>
+                        <td>Zonas Principales</td>
+                        <td>Tarifas especiales para emprendedores y negocios.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer y Contacto Directo -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Op Cargo Courier. Todos los derechos reservados.</p>
+            <p>¿Listo para realizar tu envío? Ponte en contacto directo con nuestro equipo:</p>
+            <a href="https://wa.me/17542130282" class="footer-phone" target="_blank">📲 +1 (754) 213-0282</a>
+        </div>
+    </footer>
+<!-- Sección de Testimonios / Invitación -->
+    <section style="padding: 60px 0; background-color: #ffffff; text-align: center; border-top: 1px solid #f0f0f0;">
+        <div class="container">
+            <h2 style="font-size: 32px; margin-bottom: 15px; color: #2c3e50;">¿Qué dicen nuestros clientes?</h2>
+            <p style="max-width: 600px; margin: 0 auto 35px auto; color: #666666;">Tu tranquilidad es nuestra prioridad. Gracias a tu confianza, seguimos uniendo familias.</p>
+            
+            <!-- Botón de Invitación -->
+            <a href= https://www.facebook.com/OpCargo/reviews target="_blank" style="display: inline-block; background-color: #2c3e50; color: #ffffff; text-decoration: none; padding: 12px 25px; font-weight: bold; border-radius: 5px; margin-bottom: 20px; transition: background 0.3s;">
+                ⭐ ¡Déjanos tu comentario aquí! ⭐
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
+
