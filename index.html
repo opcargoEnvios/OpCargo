@@ -1,373 +1,51 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Op Cargo Courier | Envíos a Colombia y Casillero Virtual</title>
-    <style>
-        /* Estilos Globales y Colores de la Marca */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.25;
-            color: #333333;
-            background-color: #ffffff;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Navbar adaptable */
-        header {
-            background-color: #ffffff;
-            border-bottom: 2px solid #f0f0f0;
-            padding: 10px 0;
-            position: relative;
-            z-index: 1000;
-        }
-       .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        } 
-        .logo-img {
-            display: inline-block;
-            line-height: 0;
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-        .nav-links a {
-            color: #333333;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-        }
-        .nav-links a:hover {
-            color: #d32f2f;
-        }
-        .btn-header {
-            background-color: #d32f2f;
-            color: #ffffff !important;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 60px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-main {
-            display: inline-block;
-            background-color: #d32f2f;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn-main:hover {
-            background-color: #b71c1c;
-        }
-
-        /* Sección Servicios */
-        .services {
-            padding: 60px 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-        .services h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #2c3e50;
-        }
-        .services-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .service-card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 280px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid #d32f2f;
-        }
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        /* Tabla de Tarifas */
-        .rates {
-            padding: 60px 0;
-        }
-        .rates h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #2c3e50;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #2c3e50;
-            color: white;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        /* Responsivo / Ajustes Celulares */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-                padding: 5px 0;
-            }
-            .nav-links {
-                margin-left: 0;
-                display: flex;
-                gap: 15px;
-                align-items: center;
-                justify-content: center;
-                margin-top: 5px;
-            }
-            .nav-links a {
-                margin-left: 0 !important;
-                font-size: 14px;
-            }
-            .hero h1 {
-                font-size: 30px;
-            }
-            .services-grid {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navegación -->
-    <header>
-        <div class="container navbar">
-            <a href="#" class="logo-img" style="display: inline-block; padding: 5px 0;">
-                <img src="Logo.png.png" alt="Op Cargo Logo" style="height: 130px !important; max-height: 25vw !important; width: auto !important; display: block; margin: 0 auto;">
-            </a>
-            <nav class="nav-links">
-                <a href="#servicios">Servicios</a>
-                <a href="#casillero-detalle">Casillero</a>
-                <a href="https://wa.me/17542130282" class="btn-header" target="_blank">Escríbenos</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- SECCIÓN DE RASTREO DE GUÍAS -->
-    <div style="background-color: #2c3e50; padding: 15px 0; border-bottom: 3px solid #d32f2f; text-align: center;">
-        <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <span style="color: #ffffff; font-size: 16px; font-weight: bold;">🔎 ¿Quieres saber dónde está tu paquete?</span>
-            <a href="https://colocar.helgasys.com/consulta-estado/consulta-estado" target="_blank" style="display: inline-block; background-color: #d32f2f; color: #ffffff; text-decoration: none; padding: 8px 20px; font-weight: bold; border-radius: 4px; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: background 0.3s;">
-                🚚 Rastrear mi Envío (Helga)
-            </a>
-        </div>
-    </div>
-
-    <!-- Sección de Bienvenida (Hero) -->
+<!-- Héroe / Bienvenida Estilo Dashboard con Rastreo Helga -->
     <section class="hero">
-        <div class="container">
-            <h1>Envíos a Colombia Fáciles, Seguros y Confiables</h1>
-            <p>¿Tienes familia en Colombia y quieres enviarles un regalo o una caja? En Op Cargo nos encargamos de que tus paquetes lleguen sin complicaciones.</p>
-            <a href="https://wa.me/17542130282" class="btn-main" target="_blank">Cotizar por WhatsApp</a>
-        </div>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2>Nuestros Servicios Logísticos</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Envíos Puerta a Puerta</h3>
-                    <p>Llevamos tus cajas, regalos y mercancía desde Estados Unidos hasta cualquier rincón de Colombia con la mayor seguridad.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Casillero Virtual</h3>
-                    <p>Compra en Amazon, eBay y tus tiendas favoritas de EE.UU. desde Colombia. Nosotros te asignamos una dirección en Miami y te lo reenviamos.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Asesoría y Carga</h3>
-                    <p>Te ayudamos con toda la documentación y empaque necesario para que tus envíos cumplan con todas las normativas de aduana.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE DETALLE CASILLERO VIRTUAL -->
-    <section id="casillero-detalle" style="padding: 60px 0; background-color: #f9f9f9; border-top: 1px solid #e0e0e0;">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 32px; margin-bottom: 10px; color: #2c3e50;">Tu Casillero Virtual en Miami</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: #666666; font-size: 16px;">
-                Compra en cualquier tienda online de Estados Unidos (Amazon, eBay, Walmart) y recibe tus paquetes en la puerta de tu casa en Colombia sin complicaciones.
-            </p>
-
-            <!-- Paso a Paso -->
-            <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 50px;">
-                <div style="flex: 1; min-width: 250px; background: #ffffff; padding: 25px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                    <div style="font-size: 36px; margin-bottom: 15px;">1️⃣</div>
-                    <h4 style="font-size: 20px; color: #2c3e50; margin-bottom: 10px;">Regístrate Gratis</h4>
-                    <p style="color: #666666; font-size: 14px;">Escríbenos y te asignamos de inmediato tu número de casillero personalizado sin costos mensuales.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; background: #ffffff; padding: 25px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                    <div style="font-size: 36px; margin-bottom: 15px;">2️⃣</div>
-                    <h4 style="font-size: 20px; color: #2c3e50; margin-bottom: 10px;">Compra en Línea</h4>
-                    <p style="color: #666666; font-size: 14px;">Realiza tus compras en tus tiendas favoritas utilizando la dirección de nuestra bodega en Florida.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; background: #ffffff; padding: 25px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                    <div style="font-size: 36px; margin-bottom: 15px;">3️⃣</div>
-                    <h4 style="font-size: 20px; color: #2c3e50; margin-bottom: 10px;">Recibe en Colombia</h4>
-                    <p style="color: #666666; font-size: 14px;">Nos encargamos de la recepción en Miami, la nacionalización en aduana y la entrega en tu puerta.</p>
-                </div>
-            </div>
-
-            <!-- Guía de cómo colocar la dirección -->
-            <div style="background: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 800px; margin: 0 auto 50px auto; border-left: 5px solid #d32f2f;">
-                <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 22px;">¿Cómo debes colocar tu dirección de casillero?</h3>
-                <p style="color: #666666; font-size: 14px; margin-bottom: 20px;">Al momento de registrar tus datos de envío (Shipping Address) en tiendas como Amazon, ingresa los datos de la siguiente manera para asegurar un ingreso óptimo:</p>
-                
-                <div style="background: #fdfdfd; border: 1px dashed #ccc; padding: 20px; border-radius: 5px; font-family: monospace; font-size: 15px; color: #333333; line-height: 1.4;">
-                    <strong>Full Name:</strong> Tu Nombre Completo + [Tu Código de Casillero OP]<br>
-                    <strong>Address Line 1:</strong> Dirección de la bodega de Op Cargo en Florida<br>
-                    <strong>City:</strong> Ciudad de la Bodega<br>
-                    <strong>State:</strong> FL (Florida)<br>
-                    <strong>Zip Code:</strong> Código Postal correspondiente<br>
-                    <strong>Phone:</strong> +1 (754) 213-0282
-                </div>
-            </div>
-
-            <!-- Servicio estrella: Consolidación y Reempaque -->
-            <div style="background-color: #2c3e50; color: #ffffff; border-radius: 8px; padding: 35px; text-align: center; max-width: 900px; margin: 0 auto;">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">Ahorra al Máximo con Consolidación y Reempaque 📦✨</h3>
-                <p style="max-width: 700px; margin: 0 auto 20px auto; font-size: 15px; color: #e0e0e0; line-height: 1.4;">
-                    ¿Compraste en diferentes tiendas? No te preocupes. Agrupamos todos tus artículos de diferentes proveedores en una sola caja. Esto reduce significativamente el peso, el volumen y los costos de aduana para tu envío definitivo a Colombia.
-                </p>
-                <a href="https://wa.me/17542130282" target="_blank" style="display: inline-block; background-color: #d32f2f; color: #ffffff; text-decoration: none; padding: 12px 25px; font-weight: bold; border-radius: 5px; font-size: 16px;">
-                    Abrir mi Casillero Gratis por WhatsApp
+        <div class="container" style="margin-bottom: 30px; text-align: left;">
+            <!-- BOTÓN DE RASTREO INCORPORADO -->
+            <div style="background-color: rgba(19, 28, 34, 0.8); border: 1px solid var(--borde-tarjeta); padding: 12px 20px; border-radius: 8px; display: inline-flex; align-items: center; gap: 15px; flex-wrap: wrap; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <span style="color: var(--texto-blanco); font-size: 14px; font-weight: bold;">🔎 ¿Quieres saber dónde está tu paquete?</span>
+                <a href="https://colocar.helgasys.com/consulta-estado/consulta-estado" target="_blank" style="display: inline-block; background-color: #d32f2f; color: #ffffff; text-decoration: none; padding: 6px 16px; font-weight: bold; border-radius: 4px; font-size: 13px; transition: background 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                    🚚 Rastrear mi Envío (Helga)
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Sección de Tarifas / Información -->
-    <section id="tarifas" class="rates">
-        <div class="container">
-            <h2>¿Por qué elegir Op Cargo?</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">Nos esforzamos por ofrecerte transparencia en cada libra y volumen enviado. Aquí tienes una referencia general de nuestros servicios:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Servicio</th>
-                        <th>Destino</th>
-                        <th>Beneficio Principal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Envío de Cajas (Courier)</td>
-                        <td>Toda Colombia</td>
-                        <td>Entrega directo en casa de tu familia.</td>
-                    </tr>
-                    <tr>
-                        <td>Casillero Inteligente</td>
-                        <td>Compras Online</td>
-                        <td>Almacenamiento gratis en Miami por 30 días.</td>
-                    </tr>
-                    <tr>
-                        <td>Carga Comercial</td>
-                        <td>Zonas Principales</td>
-                        <td>Tarifas especiales para emprendedores y negocios.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Sección de Testimonios / Invitación -->
-    <section style="padding: 60px 0; background-color: #ffffff; text-align: center; border-top: 1px solid #f0f0f0;">
-        <div class="container">
-            <h2 style="font-size: 32px; margin-bottom: 15px; color: #2c3e50;">¿Qué dicen nuestros clientes?</h2>
-            <p style="max-width: 600px; margin: 0 auto 35px auto; color: #666666;">Tu tranquilidad es nuestra prioridad. Gracias a tu confianza, seguimos uniendo familias.</p>
+        <div class="container hero-grid">
+            <div class="hero-info">
+                <span class="tag-miami">Miami → Colombia</span>
+                <h1>ENVÍOS <span>REDISEÑADOS</span> PARA TI</h1>
+                <p>Llevamos tus paquetes desde Estados Unidos hasta cualquier rincón de Colombia con la precisión y seguridad que tu familia merece.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/17542130282" class="btn-cyan" target="_blank">Cotizar Ahora →</a>
+                    <a href="#casillero" class="btn-outline">Casillero Virtual 📦</a>
+                </div>
+            </div>
             
-            <!-- Botón de Invitación a Facebook -->
-            <a href="https://www.facebook.com/OpCargo/reviews" target="_blank" style="display: inline-block; background-color: #3b5998; color: #ffffff; text-decoration: none; padding: 14px 28px; font-weight: bold; border-radius: 5px; margin-bottom: 20px; font-size: 16px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                🔵 ¡Déjanos tu opinión en Facebook! ⭐⭐⭐⭐⭐
-            </a>
+            <!-- Panel Estadístico Flotante -->
+            <div class="stats-panel">
+                <div class="status-indicator">Estado del sistema – Activo</div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>12,400+</h3>
+                        <p>Paquetes Entregados</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5–7 días</h3>
+                        <p>Tiempo Promedio</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p>Cobertura Colombia</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>4,800+</h3>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                </div>
+                <div class="hub-location">
+                    <svg style="width:16px; height:16px; fill:var(--azul-neon);" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    HUB: Miami, FL – Doral, FL
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Footer y Contacto Directo -->
-    <footer style="background-color: #2c3e50; color: #ffffff; padding: 40px 0; text-align: center;">
-        <div class="container">
-            <p style="margin-bottom: 15px;">© 2026 Op Cargo Courier. Todos los derechos reservados.</p>
-            
-            <!-- Iconos de Redes Sociales -->
-            <div style="margin: 20px 0; display: flex; justify-content: center; gap: 20px;">
-                <!-- Botón de Facebook -->
-                <a href="https://www.facebook.com/OpCargo" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: #3b5998; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #ffffff;">
-                        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/>
-                    </svg>
-                </a>
-                
-                <!-- Botón de Instagram -->
-                <a href="https://www.instagram.com/op.cargo/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #ffffff;">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                </a>
-            </div>
-
-         <p>¿Listo para realizar tu envío? Ponte en contacto directo con nuestro equipo:</p>
-            <a href="https://wa.me/17542130282" class="footer-phone" target="_blank" style="font-size: 24px; font-weight: bold; color: #ffffff !important; text-decoration: none; display: block; margin-top: 10px;">📲 +1 (754) 213-0282</a>
-        </div>
-    </footer>
-
-</body>
-</html>
