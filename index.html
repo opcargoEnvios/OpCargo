@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Op Cargo Courier | Envíos Rediseñados para Ti</title>
     <style>
-        /* Paleta de Colores de Precisión (Estilo Base44 Premium) */
+        /* Paleta de Colores de Precisión (Base44 Dark Premium) */
         :root {
             --bg-principal: #0b1116;
             --bg-secundario: #0e161b;
@@ -58,9 +58,11 @@
             text-decoration: none;
         }
         .logo-container img {
-            height: 55px;
+            height: 65px;
             width: auto;
             display: block;
+            /* Adaptación del logo al fondo con brillo cromado neón */
+            filter: drop-shadow(0px 0px 12px rgba(0, 229, 255, 0.5)) contrast(1.15) brightness(1.1);
         }
         .nav-links {
             display: flex;
@@ -92,10 +94,10 @@
             transform: translateY(-1px);
         }
 
-        /* Hero Section */
+        /* Hero Section - Imagen Real de Puerto de Contenedores Aéreos */
         .hero {
-            background: linear-gradient(rgba(11, 17, 22, 0.75), rgba(11, 17, 22, 0.9)), url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=1200') no-repeat center center/cover;
-            padding: 40px 0 80px 0;
+            background: linear-gradient(rgba(11, 17, 22, 0.65), rgba(11, 17, 22, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1920') no-repeat center center/cover;
+            padding: 50px 0 90px 0;
             border-bottom: 1px solid var(--borde-tarjeta);
         }
         .hero-grid {
@@ -119,11 +121,12 @@
             display: block;
         }
         .hero-info h1 {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             letter-spacing: -1px;
+            color: var(--texto-blanco);
         }
         .hero-info h1 span {
             color: var(--azul-neon);
@@ -180,7 +183,7 @@
             padding: 30px;
             width: 100%;
             max-width: 480px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
         .status-indicator {
             font-size: 12px;
@@ -217,7 +220,7 @@
             margin-bottom: 2px;
         }
         .stat-box p {
-            color: var(--texto-mutado);
+            color: var(--texto-mutated);
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -250,8 +253,9 @@
             margin-bottom: 10px;
         }
         .section-header h2 {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 700;
+            color: var(--texto-blanco);
         }
         .section-header h2 span {
             color: var(--azul-neon);
@@ -277,10 +281,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: border-color 0.3s;
-        }
-        .precision-card:hover {
-            border-color: var(--borde-tarjeta);
         }
         .card-top {
             margin-bottom: 25px;
@@ -314,6 +314,7 @@
         .precision-card h3 {
             font-size: 22px;
             margin-bottom: 12px;
+            color: var(--texto-blanco);
         }
         .precision-card .desc {
             color: var(--texto-mutado);
@@ -354,11 +355,11 @@
             transition: background 0.3s, border-color 0.3s;
         }
         .btn-card-wa:hover {
-            background-color: rgba(255,255,255,0.02);
-            border-color: var(--texto-mutado);
+            background-color: rgba(255,255,255,0.04);
+            border-color: var(--azul-neon);
         }
 
-        /* Sección Casillero Inteligente */
+        /* Sección Casillero Inteligente - Imagen Real de Lockers de Carga */
         .locker-section {
             padding: 80px 0;
             border-bottom: 1px solid var(--borde-tarjeta);
@@ -376,7 +377,7 @@
             border: 1px solid var(--borde-tarjeta);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 229, 255, 0.05);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.08);
         }
         .locker-visual img {
             width: 100%;
@@ -409,9 +410,10 @@
             fill: var(--azul-neon);
         }
         .step-text h4 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: bold;
             margin-bottom: 5px;
+            color: var(--texto-blanco);
         }
         .step-text h4 span {
             color: var(--azul-neon);
@@ -420,7 +422,7 @@
         }
         .step-text p {
             color: var(--texto-mutado);
-            font-size: 13px;
+            font-size: 13.5px;
         }
         .btn-gold {
             background-color: var(--amarillo-oro);
@@ -469,6 +471,7 @@
         }
         td {
             font-size: 14px;
+            color: var(--texto-blanco);
         }
         td strong {
             color: var(--texto-blanco);
@@ -504,8 +507,9 @@
             min-width: 320px;
         }
         .about-content h2 {
-            font-size: 36px;
+            font-size: 38px;
             margin-bottom: 20px;
+            color: var(--texto-blanco);
         }
         .about-content h2 span {
             color: var(--azul-neon);
@@ -526,6 +530,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            color: var(--texto-blanco);
         }
         .feat-box p {
             color: var(--texto-mutado);
@@ -544,8 +549,9 @@
             margin: 0 auto;
         }
         .cta-box h2 {
-            font-size: 32px;
+            font-size: 34px;
             margin-bottom: 15px;
+            color: var(--texto-blanco);
         }
         .cta-box p {
             color: var(--texto-mutado);
@@ -563,7 +569,7 @@
             font-weight: bold;
             font-size: 16px;
             border-radius: 6px;
-            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
             transition: background 0.3s;
         }
         .btn-cta-large:hover {
@@ -666,11 +672,11 @@
 </head>
 <body>
 
-   <!-- Navegación Superior con Efecto de Logotipo Resaltado -->
+    <!-- Navegación Superior -->
     <header>
         <div class="container navbar">
             <a href="#" class="logo-container">
-                <img src="Logo.png.png" alt="Op Cargo Logo" style="height: 100px !important; width: auto !important; max-height: 25vw !important; display: block; filter: drop-shadow(0px 0px 15px rgba(0, 229, 255, 0.45)) contrast(1.1) brightness(1.05); transform: translateZ(0); -webkit-font-smoothing: antialiased;">
+                <img src="Logo.png.png" alt="Op Cargo Logo">
             </a>
             <nav class="nav-links">
                 <a href="#servicios">Servicios</a>
@@ -807,16 +813,16 @@
         </div>
     </section>
 
-    <!-- Sección Casillero Inteligente Guiado -->
+    <!-- Sección Casillero Inteligente - Con Imagen Real de Lockers de Carga -->
     <section id="casillero" class="locker-section">
         <div class="container locker-grid">
             <div class="locker-visual">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt="Casillero Logístico">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600" alt="Casillero Inteligente Automatizado">
             </div>
             
             <div class="locker-steps">
                 <span style="color:var(--azul-neon); font-size:12px; font-weight:bold; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:10px;">Casillero Inteligente</span>
-                <h2 style="font-size:36px; margin-bottom:30px;">Tu dirección en Miami, <span style="color:var(--azul-neon);">sin complicaciones</span></h2>
+                <h2 style="font-size:36px; margin-bottom:30px; color: var(--texto-blanco);">Tu dirección en Miami, <span style="color:var(--azul-neon);">sin complicaciones</span></h2>
                 
                 <div class="step-row">
                     <div class="step-icon-box">
@@ -901,14 +907,14 @@
                 </table>
             </div>
             
-            <p class="table-note">Las tarifas pueden variar según peso volumétrico y destino final. Contáctanos para una cotización exacta.</p>
+            <p class="table-note">Las tarifas pueden variar según peso volumétrico y destino final. Contáctanos para una una cotización exacta.</p>
             <div style="text-align: center;">
                 <a href="https://wa.me/17542130282" class="btn-cyan" target="_blank">Cotizar Mi Envío</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Nosotros con Características -->
+    <!-- Sección Nosotros con Características - Imagen de Ruta Terrestre/Aérea -->
     <section id="nosotros" class="about-section">
         <div class="container about-grid">
             <div class="about-content">
@@ -938,7 +944,7 @@
             
             <div class="locker-visual" style="flex:1; min-width:320px; border:none; background-color:var(--bg-tarjeta); padding:20px; border-radius:12px;">
                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600" alt="Rutas de Envíos Internacionales" style="border-radius:8px; opacity:0.8;">
-                <div style="margin-top:15px; background-color:rgba(0,0,0,0.2); padding:12px; border-radius:6px; font-size:12px; font-family:monospace; display:flex; justify-content:space-between; color:var(--amarillo-oro);">
+                <div style="margin-top:15px; background-color:rgba(0,0,0,0.4); padding:12px; border-radius:6px; font-size:12px; font-family:monospace; display:flex; justify-content:space-between; color:var(--amarillo-oro);">
                     <span>RUTA ACTIVA</span>
                     <span>MIA → BOG · MDE · CLO · BAQ</span>
                 </div>
